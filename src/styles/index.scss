@@ -1,0 +1,9 @@
+@use 'reset';
+@use 'vars';
+
+body {
+  font-family: sans-serif;
+  background-color: vars.$bg-color;
+  color: white;
+}
+
