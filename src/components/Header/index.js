@@ -1,8 +1,7 @@
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import './style.scss';
-import logo from '../../assets/img/logo.png';
+import logo from '../../assets/img/logo.svg';
 
 function Header() {
   return (
@@ -14,9 +13,5 @@ function Header() {
     </div>
   );
 }
-
-Header.propTypes = {
-
-};
 
 export default Header;

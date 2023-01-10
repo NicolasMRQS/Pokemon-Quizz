@@ -12,11 +12,31 @@ const pkmnNbFromGen = (gen) => {
       return [387, 493];
     case 5:
       return [494, 649];
+    case 6:
+      return [650, 721];
+    case 7:
+      return [722, 809];
+    case 8:
+      return [810, 905];
+    case 0:
+      return [1, 905];
     default:
       break;
   }
 };
 
-const getRandomNumber = (a, b) => Math.floor((Math.random() * (a - b)) + a);
+const getRandomNumber = (min, max) => Math.floor((Math.random() * (max - min)) + min);
 
-export { pkmnNbFromGen, getRandomNumber };
+const getTenDifferentNumber = (min, max) => {
+  const nbList = [];
+  while (nbList.length < 10) {
+    const number = getRandomNumber(min, max);
+    const different = nbList.find((n) => n === number);
+    if (!different) {
+      nbList.push(number);
+    }
+  }
+  return nbList;
+};
+
+export { pkmnNbFromGen, getRandomNumber, getTenDifferentNumber };

@@ -1,25 +1,17 @@
 @use '/src/styles/vars';
 
-.Home {
-  &__img-container {
-    display: flex;
-    gap: 32px;
-    margin: 16px 0 24px;
-    max-width: 100%;
+.Score {
+  &__points {
+    font-size: 64px;
+    font-weight: bold;
+    margin-top: 24px;
+    border: 8px solid white;
+    padding: 8px 16px;
+    border-radius: 24px;
   }
 
-  &__exemple1 {
-    filter: brightness(0);
-    width: 250px;
-    max-width: calc(50% - 16px);
-  }
-
-  &__exemple2 {
-    width: 250px;
-    max-width: calc(50% - 16px);
-  }
-
-  &__start-button {
+  &__button {
+    margin-top: 32px;
     background-color: white;
     padding: 16px 24px;
     font-size: 24px;

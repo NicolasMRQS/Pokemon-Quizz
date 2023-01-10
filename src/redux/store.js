@@ -1,11 +1,14 @@
 /* eslint-disable no-underscore-dangle */
-import { createStore } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 
 import reducer from 'src/redux/reducers';
+import ajax from './ajax';
 
-const store = createStore(
-  reducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-);
+const middleware = applyMiddleware(ajax);
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const enhancers = composeEnhancers(middleware);
+
+const store = createStore(reducer, enhancers);
 
 export default store;
