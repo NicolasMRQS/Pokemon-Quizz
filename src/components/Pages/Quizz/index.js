@@ -94,7 +94,7 @@ function Quizz() {
     const answerLower = answer.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     const faults = distance(nameLower, answerLower);
 
-    if (faults < 2) {
+    if (faults < 3) {
       const newPoints = points + 1;
       dispatch({
         type: 'SAVE_POINT',
