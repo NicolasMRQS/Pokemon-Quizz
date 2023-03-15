@@ -123,7 +123,7 @@ function Quizz() {
         <img className={showPkmn ? 'Quizz__img' : 'Quizz__img-hidden'} src={img} alt="?" />
         {showPkmn ? <p className={`Quizz__answer${correct}`}>{name}</p> : ''}
       </div>
-      <form className="Quizz__form" onSubmit={handleSubmit}>
+      <form className="Quizz__form" onSubmit={handleSubmit} autoComplete="off" spellCheck="off">
         <input className="Quizz__input" value={answer} autoFocus type="text" onChange={handleChange} />
         <button className="Quizz__button" type="submit"> ► </button>
       </form>
