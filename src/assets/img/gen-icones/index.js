@@ -6,6 +6,7 @@ import gen5 from './5.png';
 import gen6 from './6.png';
 import gen7 from './7.png';
 import gen8 from './8.png';
+import gen9 from './9.png';
 
 export default {
   gen1,
@@ -16,4 +17,5 @@ export default {
   gen6,
   gen7,
   gen8,
+  gen9,
 };

@@ -58,6 +58,10 @@ function Select() {
           <span>• Génération 8</span>
           <img className="Select__gen--icone" src={genIconeData.gen8} alt="Larméléon" style={{ width: '45px', right: '19px' }} />
         </li>
+        <li className="Select__gen" data-gen="9" onClick={handleClick}>
+          <span>• Génération 9</span>
+          <img className="Select__gen--icone" src={genIconeData.gen9} alt="Poussacha" style={{ width: '35px', right: '22px', top: '-12px' }} />
+        </li>
         <li className="Select__gen" data-gen="0" onClick={handleClick}>
           <span>• Toute les générations</span>
         </li>
